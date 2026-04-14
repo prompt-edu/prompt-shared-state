@@ -23,11 +23,7 @@ jobs:
         run: corepack enable
 
       - name: Install dependencies
-        env:
-          NPM_AUTH_TOKEN: '' # Required by .yarnrc.yml even though this workflow doesn't publish
         run: yarn install --frozen-lockfile
 
       - name: Build package
-        env:
-          NPM_AUTH_TOKEN: '' # Required by .yarnrc.yml even though this workflow doesn't publish
         run: yarn build
