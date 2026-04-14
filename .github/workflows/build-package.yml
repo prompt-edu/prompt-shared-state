@@ -1,10 +1,8 @@
-name: Build
+name: Build Package
 
 on:
   pull_request:
-    branches:
-      - main
-  workflow_dispatch:
+    branches: [main]
 
 permissions:
   contents: read
