@@ -23,16 +23,19 @@
   },
   "packageManager": "yarn@4.14.1",
   "dependencies": {
-    "@tanstack/react-query": "^5.99.2",
     "axios": "^1.15.2",
     "i18n-iso-countries": "^7.14.0",
     "js-sha256": "^0.11.1",
-    "react": "^19.2.5",
-    "react-router-dom": "^7.14.1",
     "typescript": "^5.9.3",
     "zustand": "^5.0.12"
   },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.99.2",
+    "react": "^19.2.5",
+    "react-router-dom": "^7.14.1"
+  },
   "devDependencies": {
+    "@tanstack/react-query": "^5.99.2",
     "@types/react": "^19.2.14",
     "@typescript-eslint/eslint-plugin": "^8.59.0",
     "@typescript-eslint/parser": "^8.59.0",
@@ -41,6 +44,8 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.5.0",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "react": "^19.2.5",
+    "react-router-dom": "^7.14.1"
   }
 }
