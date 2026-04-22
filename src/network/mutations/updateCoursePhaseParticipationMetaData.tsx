@@ -1,4 +1,5 @@
 import { axiosInstance } from '../configService'
+import { logNetworkError } from '../logNetworkError'
 import { UpdateCoursePhaseParticipation } from '../../interfaces'
 
 export const updateCoursePhaseParticipation = async (
@@ -11,13 +12,13 @@ export const updateCoursePhaseParticipation = async (
         participation,
         {
           headers: {
-            'Content-Type': 'application/json-path+json',
+            'Content-Type': 'application/json',
           },
         },
       )
     ).data.id // try to get the id of the updated participation
   } catch (err) {
-    console.error(err)
+    logNetworkError('Error updating course phase participation metadata', err)
     throw err
   }
 }

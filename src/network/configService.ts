@@ -4,9 +4,7 @@ import axios from 'axios'
 import { env } from '../env'
 import { parseURL } from '../utils/parseURL'
 
-const coreURL = env.CORE_HOST || ''
-
-const serverBaseUrl = parseURL(coreURL)
+const getServerBaseUrl = (): string => parseURL(env.CORE_HOST || '')
 
 export interface Patch {
   op: 'replace' | 'add' | 'remove' | 'copy'
@@ -14,19 +12,27 @@ export interface Patch {
   value: string
 }
 
-const authenticatedAxiosInstance = axios.create({
-  baseURL: serverBaseUrl,
-})
+const authenticatedAxiosInstance = axios.create()
 
 authenticatedAxiosInstance.interceptors.request.use((config) => {
-  if (!!localStorage.getItem('jwt_token') && localStorage.getItem('jwt_token') !== '') {
-    config.headers['Authorization'] = `Bearer ${localStorage.getItem('jwt_token') ?? ''}`
+  config.baseURL = getServerBaseUrl()
+
+  if (typeof localStorage !== 'undefined') {
+    const token = localStorage.getItem('jwt_token')
+
+    if (token) {
+      config.headers['Authorization'] = `Bearer ${token}`
+    }
   }
+
   return config
 })
 
-const notAuthenticatedAxiosInstance = axios.create({
-  baseURL: serverBaseUrl,
+const notAuthenticatedAxiosInstance = axios.create()
+
+notAuthenticatedAxiosInstance.interceptors.request.use((config) => {
+  config.baseURL = getServerBaseUrl()
+  return config
 })
 
 export { authenticatedAxiosInstance as axiosInstance, notAuthenticatedAxiosInstance }

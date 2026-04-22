@@ -1,4 +1,5 @@
 import { axiosInstance } from '../configService'
+import { logNetworkError } from '../logNetworkError'
 import { UpdateCoursePhaseParticipation } from '../../interfaces'
 
 export const updateCoursePhaseParticipationBatch = async (
@@ -11,12 +12,12 @@ export const updateCoursePhaseParticipationBatch = async (
       updateParticipations,
       {
         headers: {
-          'Content-Type': 'application/json-path+json',
+          'Content-Type': 'application/json',
         },
       },
     )
   } catch (err) {
-    console.error(err)
+    logNetworkError('Error updating course phase participation batch', err)
     throw err
   }
 }

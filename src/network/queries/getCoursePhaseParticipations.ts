@@ -1,4 +1,5 @@
 import { axiosInstance } from '../configService'
+import { logNetworkError } from '../logNetworkError'
 import { CoursePhaseParticipationsWithResolution } from '../../interfaces'
 
 export const getCoursePhaseParticipations = async (
@@ -7,7 +8,7 @@ export const getCoursePhaseParticipations = async (
   try {
     return (await axiosInstance.get(`/api/course_phases/${coursePhaseID}/participations`)).data
   } catch (err) {
-    console.error(err)
+    logNetworkError('Error fetching course phase participations', err)
     throw err
   }
 }

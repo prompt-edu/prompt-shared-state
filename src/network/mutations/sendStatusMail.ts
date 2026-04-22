@@ -1,5 +1,6 @@
 import { axiosInstance } from '../configService'
 import { SendStatusMail, MailingReport } from '../../interfaces'
+import { logNetworkError } from '../logNetworkError'
 
 export const sendStatusMail = async (
   coursePhaseID: string,
@@ -9,12 +10,12 @@ export const sendStatusMail = async (
     return (
       await axiosInstance.put(`/api/mailing/${coursePhaseID}`, status, {
         headers: {
-          'Content-Type': 'application/json-path+json',
+          'Content-Type': 'application/json',
         },
       })
     ).data
   } catch (err) {
-    console.error(err)
+    logNetworkError('Error sending status mail', err)
     throw err
   }
 }
