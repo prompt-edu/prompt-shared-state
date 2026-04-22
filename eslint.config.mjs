@@ -7,12 +7,14 @@ import prettier from 'eslint-plugin-prettier'
 
 export default [
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
-      'node_modules/**', // Ignore dependencies
-      'dist/**',         // Ignore dist output
-      'build/**',        // Ignore build output
+      'node_modules/**',
+      'dist/**',
+      'build/**',
     ],
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
 
     languageOptions: {
       parser: tsParser,
