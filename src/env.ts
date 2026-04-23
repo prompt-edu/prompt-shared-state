@@ -46,7 +46,7 @@ const requiredKeys: (keyof EnvType)[] = [
   'SELF_TEAM_ALLOCATION_HOST',
   'TEMPLATE_HOST',
   'CERTIFICATE_HOST',
-  'SENTRY_DSN_CLIENT'
+  'SENTRY_DSN_CLIENT',
 ]
 
 function isEnvironment(value: unknown): value is Environment {
@@ -58,7 +58,9 @@ function normalizeString(value: unknown): string {
 }
 
 function normalizeEnv(rawEnv: Partial<EnvType>): EnvType {
-  const environment: Environment = isEnvironment(rawEnv.ENVIRONMENT) ? rawEnv.ENVIRONMENT : 'development'
+  const environment: Environment = isEnvironment(rawEnv.ENVIRONMENT)
+    ? rawEnv.ENVIRONMENT
+    : 'development'
 
   const invalidKeys: string[] = []
 
@@ -84,7 +86,7 @@ function normalizeEnv(rawEnv: Partial<EnvType>): EnvType {
     SELF_TEAM_ALLOCATION_HOST: normalizeString(rawEnv.SELF_TEAM_ALLOCATION_HOST),
     TEMPLATE_HOST: normalizeString(rawEnv.TEMPLATE_HOST),
     CERTIFICATE_HOST: normalizeString(rawEnv.CERTIFICATE_HOST),
-    SENTRY_DSN_CLIENT: normalizeString(rawEnv.SENTRY_DSN_CLIENT)
+    SENTRY_DSN_CLIENT: normalizeString(rawEnv.SENTRY_DSN_CLIENT),
   }
 
   for (const key of requiredKeys) {

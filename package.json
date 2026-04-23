@@ -1,6 +1,6 @@
 {
   "name": "@tumaet/prompt-shared-state",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prompt-edu/prompt-shared-state.git"
@@ -10,7 +10,10 @@
   "types": "./dist/types/index.d.ts",
   "license": "MIT",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./*": "./dist/*"
   },
   "files": [
