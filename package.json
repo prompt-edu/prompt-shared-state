@@ -33,12 +33,12 @@
     "zustand": "^5.0.12"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^5.99.2",
+    "@tanstack/react-query": "^5.100.9",
     "react": "^19.2.5",
     "react-router-dom": "^7.14.2"
   },
   "devDependencies": {
-    "@tanstack/react-query": "^5.99.2",
+    "@tanstack/react-query": "^5.100.9",
     "@types/react": "^19.2.14",
     "@typescript-eslint/eslint-plugin": "^8.59.0",
     "@typescript-eslint/parser": "^8.59.0",
