@@ -34,7 +34,7 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.100.11",
-    "react": "^19.2.5",
+    "react": "^19.2.6",
     "react-router-dom": "^7.14.2"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.5.0",
     "prettier": "^3.8.3",
-    "react": "^19.2.5",
+    "react": "^19.2.6",
     "react-router-dom": "^7.14.2"
   }
 }
