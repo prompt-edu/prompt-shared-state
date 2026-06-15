@@ -34,12 +34,12 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.101.0",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "react-router-dom": "^7.14.2"
   },
   "devDependencies": {
     "@tanstack/react-query": "^5.101.0",
-    "@types/react": "^19.2.15",
+    "@types/react": "^19.2.17",
     "@typescript-eslint/eslint-plugin": "^8.59.4",
     "@typescript-eslint/parser": "^8.59.4",
     "eslint": "^10.4.1",
@@ -48,7 +48,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.6.0",
     "prettier": "^3.8.4",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "react-router-dom": "^7.14.2"
   }
 }
