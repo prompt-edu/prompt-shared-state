@@ -1,6 +1,6 @@
+import type { UpdateCoursePhaseParticipation } from '../../interfaces'
 import { axiosInstance } from '../configService'
 import { logNetworkError } from '../logNetworkError'
-import { UpdateCoursePhaseParticipation } from '../../interfaces'
 
 export const updateCoursePhaseParticipationBatch = async (
   coursePhaseID: string,

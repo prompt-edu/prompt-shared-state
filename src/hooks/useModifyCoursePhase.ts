@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
-import { UpdateCoursePhase } from '../interfaces'
+import type { UpdateCoursePhase } from '../interfaces'
 import { updateCoursePhase } from '../network/mutations/updateCoursePhase'
 
 export const useModifyCoursePhase = (onSuccess: () => void, onError: () => void) => {

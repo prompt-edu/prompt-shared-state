@@ -1,4 +1,4 @@
-import { UpdateCoursePhase } from '../../interfaces'
+import type { UpdateCoursePhase } from '../../interfaces'
 import { axiosInstance } from '../configService'
 import { logNetworkError } from '../logNetworkError'
 

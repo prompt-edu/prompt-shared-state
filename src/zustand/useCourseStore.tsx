@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Course } from '../interfaces/course/course'
+import type { Course } from '../interfaces/course/course'
 
 interface CourseStoreState {
   courses: Course[]

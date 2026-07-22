@@ -1,6 +1,6 @@
-import { useMutation, UseMutationResult, useQueryClient } from '@tanstack/react-query'
+import { type UseMutationResult, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
-import { UpdateCoursePhaseParticipation } from '../interfaces'
+import type { UpdateCoursePhaseParticipation } from '../interfaces'
 import { updateCoursePhaseParticipationBatch } from '../network/mutations/updateCoursePhaseParticipationBatch'
 
 export const useUpdateCoursePhaseParticipationBatch = (): UseMutationResult<

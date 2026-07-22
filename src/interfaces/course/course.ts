@@ -1,4 +1,4 @@
-import { CoursePhaseWithType } from '../coursePhase/coursePhaseWithType'
+import type { CoursePhaseWithType } from '../coursePhase/coursePhaseWithType'
 
 export interface Course {
   id: string

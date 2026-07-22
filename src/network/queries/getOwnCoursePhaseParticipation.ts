@@ -1,6 +1,6 @@
+import type { CoursePhaseParticipationWithStudent } from '../../interfaces'
 import { axiosInstance } from '../configService'
 import { logNetworkError } from '../logNetworkError'
-import { CoursePhaseParticipationWithStudent } from '../../interfaces'
 
 export const getOwnCoursePhaseParticipation = async (
   coursePhaseID: string,

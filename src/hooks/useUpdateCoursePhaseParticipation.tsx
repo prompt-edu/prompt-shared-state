@@ -1,9 +1,9 @@
-import { useMutation, UseMutationResult, useQueryClient } from '@tanstack/react-query'
+import { type UseMutationResult, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
-import {
-  UpdateCoursePhaseParticipation,
-  CoursePhaseParticipationWithStudent,
+import type {
   CoursePhaseParticipationsWithResolution,
+  CoursePhaseParticipationWithStudent,
+  UpdateCoursePhaseParticipation,
 } from '../interfaces'
 import { updateCoursePhaseParticipation } from '../network/mutations/updateCoursePhaseParticipationMetaData'
 

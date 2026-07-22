@@ -1,6 +1,6 @@
+import type { CoursePhaseWithMetaData } from '../../interfaces'
 import { axiosInstance } from '../configService'
 import { logNetworkError } from '../logNetworkError'
-import { CoursePhaseWithMetaData } from '../../interfaces'
 
 export const getCoursePhase = async (coursePhaseID: string): Promise<CoursePhaseWithMetaData> => {
   try {

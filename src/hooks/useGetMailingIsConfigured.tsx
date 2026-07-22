@@ -1,5 +1,5 @@
-import { useCourseStore } from '../zustand'
 import { useParams } from 'react-router-dom'
+import { useCourseStore } from '../zustand'
 
 export const useGetMailingIsConfigured = (): boolean => {
   const { courseId } = useParams<{ courseId: string }>()
