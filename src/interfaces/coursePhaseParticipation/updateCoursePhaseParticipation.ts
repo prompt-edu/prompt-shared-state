@@ -1,4 +1,4 @@
-import { PassStatus } from './passStatus'
+import type { PassStatus } from './passStatus'
 
 export interface UpdateCoursePhaseParticipation {
   coursePhaseID: string

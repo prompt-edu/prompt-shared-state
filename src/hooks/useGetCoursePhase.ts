@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
-import { CoursePhaseWithMetaData } from '../interfaces'
+import type { CoursePhaseWithMetaData } from '../interfaces'
 import { getCoursePhase } from '../network/queries/getCoursePhase'
 
 export const useGetCoursePhase = () => {

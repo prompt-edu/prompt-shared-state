@@ -1,5 +1,5 @@
+import type { MailingReport, SendStatusMail } from '../../interfaces'
 import { axiosInstance } from '../configService'
-import { SendStatusMail, MailingReport } from '../../interfaces'
 import { logNetworkError } from '../logNetworkError'
 
 export const sendStatusMail = async (

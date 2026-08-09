@@ -1,5 +1,5 @@
-import { Role } from '..'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import type { Role } from '..'
 
 export interface SidebarMenuItemProps {
   goToPath: string

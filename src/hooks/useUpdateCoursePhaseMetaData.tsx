@@ -1,7 +1,7 @@
-import { useMutation, UseMutationResult, useQueryClient } from '@tanstack/react-query'
+import { type UseMutationResult, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
+import type { CoursePhaseWithMetaData, UpdateCoursePhase } from '../interfaces'
 import { updateCoursePhase } from '../network/mutations/updateCoursePhase'
-import { UpdateCoursePhase, CoursePhaseWithMetaData } from '../interfaces'
 
 interface MutationContext {
   previousCoursePhase?: CoursePhaseWithMetaData

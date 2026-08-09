@@ -1,6 +1,6 @@
-import { Person } from '../person/person'
-import { Gender } from './gender'
-import { StudyDegree } from './studyDegree'
+import type { Person } from '../person/person'
+import type { Gender } from './gender'
+import type { StudyDegree } from './studyDegree'
 
 export interface Student extends Person {
   email: string

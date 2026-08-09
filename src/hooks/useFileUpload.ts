@@ -1,6 +1,10 @@
-import { useMutation, UseMutationResult } from '@tanstack/react-query'
-import { uploadFile, FileUploadParams, FileResponse } from '../network/mutations/uploadFile'
+import { type UseMutationResult, useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
+import {
+  type FileResponse,
+  type FileUploadParams,
+  uploadFile,
+} from '../network/mutations/uploadFile'
 
 interface UseFileUploadOptions {
   onSuccess?: (data: FileResponse) => void

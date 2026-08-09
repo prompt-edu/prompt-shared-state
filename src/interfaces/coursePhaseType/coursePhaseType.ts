@@ -1,4 +1,4 @@
-import { CoursePhaseTypeMetaDataItem } from './coursePhaseTypeMetaDataItem'
+import type { CoursePhaseTypeMetaDataItem } from './coursePhaseTypeMetaDataItem'
 
 export interface CoursePhaseType {
   id: string

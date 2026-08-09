@@ -1,5 +1,5 @@
-import { Student } from '../student/student'
-import { PassStatus } from './passStatus'
+import type { Student } from '../student/student'
+import type { PassStatus } from './passStatus'
 
 export interface CoursePhaseParticipationWithStudent {
   coursePhaseID: string
