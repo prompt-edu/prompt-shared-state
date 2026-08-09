@@ -29,24 +29,24 @@
     "check": "biome check",
     "check:fix": "biome check --fix"
   },
-  "packageManager": "yarn@4.17.1",
+  "packageManager": "yarn@4.18.0",
   "dependencies": {
-    "axios": "^1.18.1",
+    "axios": "^1.19.0",
     "i18n-iso-countries": "^7.14.0",
-    "js-sha256": "^0.11.1",
+    "js-sha256": "^1.0.0",
     "typescript": "^5.9.3",
     "zustand": "^5.0.14"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^5.101.2",
-    "react": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "@tanstack/react-query": "^5.101.4",
+    "react": "^19.2.8",
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.2",
-    "@tanstack/react-query": "^5.101.2",
-    "@types/react": "^19.2.17",
-    "react": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "@tanstack/react-query": "^5.101.4",
+    "@types/react": "^19.2.18",
+    "react": "^19.2.8",
+    "react-router-dom": "^7.18.2"
   }
 }
