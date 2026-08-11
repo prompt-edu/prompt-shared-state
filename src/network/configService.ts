@@ -1,10 +1,6 @@
-// TODO rewrite this as context provider and re-integrate it into the shared library
-
-import axios from 'axios'
+import axios, { type AxiosInstance } from 'axios'
 import { env } from '../env'
 import { parseURL } from '../utils/parseURL'
-
-const getServerBaseUrl = (): string => parseURL(env.CORE_HOST || '')
 
 export interface Patch {
   op: 'replace' | 'add' | 'remove' | 'copy'
@@ -12,26 +8,32 @@ export interface Patch {
   value: string
 }
 
-const authenticatedAxiosInstance = axios.create()
+export const createAuthenticatedAxiosInstance = (baseHost: string): AxiosInstance => {
+  const instance = axios.create()
 
-authenticatedAxiosInstance.interceptors.request.use((config) => {
-  config.baseURL = getServerBaseUrl()
+  instance.interceptors.request.use((config) => {
+    config.baseURL = parseURL(baseHost || '')
 
-  if (typeof localStorage !== 'undefined') {
-    const token = localStorage.getItem('jwt_token')
+    if (typeof localStorage !== 'undefined') {
+      const token = localStorage.getItem('jwt_token')
 
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`
+      if (token) {
+        config.headers['Authorization'] = `Bearer ${token}`
+      }
     }
-  }
 
-  return config
-})
+    return config
+  })
+
+  return instance
+}
+
+const authenticatedAxiosInstance = createAuthenticatedAxiosInstance(env.CORE_HOST)
 
 const notAuthenticatedAxiosInstance = axios.create()
 
 notAuthenticatedAxiosInstance.interceptors.request.use((config) => {
-  config.baseURL = getServerBaseUrl()
+  config.baseURL = parseURL(env.CORE_HOST || '')
   return config
 })
 
