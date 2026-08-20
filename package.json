@@ -35,7 +35,7 @@
     "i18n-iso-countries": "^7.14.0",
     "js-sha256": "^1.0.0",
     "typescript": "^5.9.3",
-    "zustand": "^5.0.14"
+    "zustand": "^5.0.15"
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.101.4",
@@ -43,7 +43,7 @@
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.7",
+    "@biomejs/biome": "2.5.8",
     "@tanstack/react-query": "^5.101.4",
     "@types/react": "^19.2.18",
     "react": "^19.2.8",
