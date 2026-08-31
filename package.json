@@ -38,13 +38,13 @@
     "zustand": "^5.0.15"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^5.101.4",
+    "@tanstack/react-query": "^5.102.2",
     "react": "^19.2.8",
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.9",
-    "@tanstack/react-query": "^5.101.4",
+    "@biomejs/biome": "2.5.10",
+    "@tanstack/react-query": "^5.102.2",
     "@types/react": "^19.2.18",
     "react": "^19.2.8",
     "react-router-dom": "^7.18.2"
