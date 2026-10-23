@@ -40,9 +40,11 @@ export const uploadFile = async (params: FileUploadParams): Promise<FileResponse
       ? `/api/apply/authenticated/${params.coursePhaseId}`
       : `/api/apply/${params.coursePhaseId}`
 
+    // The server binds the upload URL to this size, so the PUT below must send exactly the file.
     const presignResponse = await axiosInstance.post(`${basePath}/files/presign`, {
       filename: params.file.name,
       contentType,
+      sizeBytes: params.file.size,
       description: params.description,
       tags: params.tags,
     })
