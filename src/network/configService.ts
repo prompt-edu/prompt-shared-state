@@ -31,12 +31,12 @@ export const createAuthenticatedAxiosInstance = (baseHost: string): AxiosInstanc
     return config
   })
 
+  instance.interceptors.response.use((response) => response, logAndRethrow)
+
   return instance
 }
 
 const authenticatedAxiosInstance = createAuthenticatedAxiosInstance(env.CORE_HOST)
-
-authenticatedAxiosInstance.interceptors.response.use((response) => response, logAndRethrow)
 
 const notAuthenticatedAxiosInstance = axios.create()
 
