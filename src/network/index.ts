@@ -1,4 +1,5 @@
 export * from './configService'
+export * from './logNetworkError'
 export * from './mutations/deleteApplicationFile'
 export * from './mutations/sendStatusMail'
 export * from './mutations/updateCoursePhase'
